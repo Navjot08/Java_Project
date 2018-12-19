@@ -1,0 +1,55 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.5.15
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema two_wheeler
+--
+
+CREATE DATABASE IF NOT EXISTS two_wheeler;
+USE two_wheeler;
+
+--
+-- Definition of table `emi_tab`
+--
+
+DROP TABLE IF EXISTS `emi_tab`;
+CREATE TABLE `emi_tab` (
+  `Reg_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `File_id` int(10) unsigned NOT NULL,
+  `Down_pay` int(10) unsigned NOT NULL,
+  `Fin_amt` int(10) unsigned NOT NULL,
+  `Ins_amt` int(10) unsigned NOT NULL,
+  `due_date` date NOT NULL,
+  PRIMARY KEY (`Reg_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `emi_tab`
+--
+
+/*!40000 ALTER TABLE `emi_tab` DISABLE KEYS */;
+/*!40000 ALTER TABLE `emi_tab` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
